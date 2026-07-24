@@ -1,0 +1,27 @@
+			Environment 🐍 Creation in Python
+			
+	1. -> pip3 list
+	
+	2. -> Creating Virtual Env 'python3 -m venv project_env'
+	
+	3. -> Activating The Environment 'source project_env/bin/activate'
+	
+	4. -> Seeing The Tool are install in The Environment using 'pip list'
+	
+	5. -> Then Install The Some Packages 'pip install requests' & 'pip install pytz'
+	
+	6. -> For Getting all packages in txt for by 'pip freeze' 
+	
+	7. -> For moving the txt packages in a file 'pip freeze > requirements.txt'
+	
+	8. -> For Getting out From the Environment 'deactivate'
+	
+	9. -> For Deleting the Environment 'rm -rf project_env/'
+	
+	10. -> Best Practice 
+		'mkdir my_project
+		 python3 -m venv my_project/venv
+		 source my_project/venv/bin/activate'
+	
+	11. -> How To use requirements.txt 'pip install -r requirements.txt' then all the packages 
+		insatll
