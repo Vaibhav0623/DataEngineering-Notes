@@ -1,12 +1,11 @@
-
 import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-formatter = logging.Formatter('%(levelname)s:%(name)s%(message)s')
+formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
 
-file_handler = logging.FileHandler('employee.log')
+file_handler = logging.FileHandler('employee_02.log')
 file_handler.setFormatter(formatter)
 
 logger.addHandler(file_handler)
@@ -30,6 +29,6 @@ class Employee:
         return '{} {}'.format(self.first, self.last)
 
 
-emp_1 = Employee('yashraj', 'singh')
-emp_2 = Employee('suraj', 'Dubey')
-emp_3 = Employee('ram', 'nayadu')
+emp_1 = Employee('John', 'Smith')
+emp_2 = Employee('Corey', 'Schafer')
+emp_3 = Employee('Jane', 'Doe')
