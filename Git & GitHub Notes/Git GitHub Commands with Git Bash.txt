@@ -1,0 +1,112 @@
+						Git&GitHub Commands with git bash
+						
+					
+	==> General Terminal Commands
+
+--> git --version: Checks the version of Git currently installed on your computer.
+
+--> cd <directory>: Changes your current directory/folder in the terminal.
+
+--> pwd: Prints your current working directory path.
+
+--> mkdir <folder_name>: Creates a new directory/folder.
+
+--> touch <file_name>: Creates a new, empty file.
+
+--> ls: Lists the files and folders in your current directory.
+
+--> ls -la: Lists all files and folders, including hidden system files (like the .git folder).
+
+--> open .: Opens the current directory in your file explorer (specifically on Mac).
+
+	==> Basic Git Setup & Initialization
+
+--> git init: Initializes an empty, hidden Git repository in your current folder.
+
+--> git clone <url>: Downloads a complete copy of a remote repository (like from GitHub) to your local machine.
+
+--> git config --global user.name "...": Sets the global username that will be attached to all your commits.
+
+--> git config --global user.email "...": Sets the global email address attached to your commits.
+
+	==> Tracking & Committing Work
+
+--> git status: Shows the current state of your working directory (detailing modified, staged, and untracked files).
+
+--> git add --all (or git add -A): Stages all new, modified, and deleted files across your entire project.
+
+--> git add .: Stages all changes located in your current directory and its subdirectories.
+
+--> git add *: Stages all visible new or modified files, but intentionally ignores deleted files.
+
+--> git add <file_name>: Stages one specific file (e.g., git add 1.txt).
+
+--> git add *.<extension>: Stages all files ending with a specific extension (e.g., git add *.txt).
+
+--> git commit -m "...": Permanently saves your staged changes to the local repository with a descriptive message.
+
+	==> Removing, Restoring & Undoing Changes
+
+--> git reset: Unstages all current changes, moving them back to the working directory without deleting your work.
+
+--> git reset HEAD~: Undoes your very last commit and brings those changes back to the working directory.
+
+--> git reset --hard: Forcefully reverts all changes and deleted files back to the exact state of the last commit.
+
+--> git rm <file_name>: Deletes a file from your file system and stages the deletion simultaneously.
+
+--> git rm -f <file_name>: Forcefully deletes a file that currently contains uncommitted local modifications.
+
+--> git rm --cached <file_name>: Removes a file from Git's tracking/staging area but keeps it physically on your computer.
+
+--> git rm -r <folder_name>: Recursively deletes a folder along with all of its contents and stages the deletion.
+
+--> git restore <file_name>: Discards uncommitted local changes and reverts a file back to its last committed state.
+
+--> git restore .: Reverts all files in your working directory back to their last committed state.
+
+--> git restore --staged <file_name>: Unstages a file but safely keeps your modifications in the working directory.
+
+--> git revert <commit_id>: Creates a completely new commit that safely undoes the changes made in a specific past commit.
+
+	==> Viewing History & Comparing
+
+--> git log: Displays the full chronological history of all commits made in the repository.
+
+--> git log --oneline: Displays the commit history in a cleaner, compact single-line format.
+
+--> git diff <commit_id_1> <commit_id_2>: Compares and highlights the exact differences (added/removed lines) between two commits.
+
+	==> Branching & Merging
+
+--> git branch: Lists all the branches that currently exist in your local repository.
+
+--> git branch <branch_name>: Creates a new branch that inherits the exact state of the branch you are currently on.
+
+--> git checkout <branch_name>: Switches your working directory to the specified branch.
+
+--> git checkout <commit_id>: Moves your project state back in time so you can inspect a specific past commit.
+
+--> git merge <branch_name>: Combines all the changes from the specified branch into your current branch.
+
+--> git rebase <branch_name>: Moves the base of your current branch to the latest commit of the specified branch to keep a clean, linear history.
+
+	==> Remote Repositories (GitHub)
+
+--> git push origin <branch_name>: Uploads your local commits from a specific branch to the remote repository.
+
+--> git fetch: Downloads the latest changes from the remote repository without automatically merging them into your files.
+
+--> git pull: Downloads the latest remote changes and immediately merges them into your current local branch.
+
+	==> Stashing (Temporary Saves)
+
+--> git stash: Temporarily tucks away your uncommitted changes so you can switch branches with a clean working directory.
+
+--> git stash pop: Restores your most recently stashed changes and removes them from the stash list.
+
+--> git stash apply: Restores your stashed changes but keeps a copy of them in the stash list for future use.
+
+--> git stash list: Displays a numbered list of all the work you currently have saved in your stash.
+
+--> git stash drop: Manually deletes a specific stash from your stash list.
